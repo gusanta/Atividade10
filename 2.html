@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Escolha a opção desejada:</h1> <br>
+
+        <h2>1. Imposto</h2>
+        <button onclick="imposto()">Clique aqui!</button> <br><br>
+
+        <h2>2. Novo Salário</h2>
+        <button onclick="novosalario()">Clique aqui!</button> <br><br>
+
+        <h2>3. Classificação</h2>
+        <button onclick="classificacao()">Clique aqui!</button> <br><br>
+    </div>
+    
+    <script>
+
+    //1.Imposto//
+
+        function imposto(){
+           let salario = parseFloat(prompt("Digite seu salário:"));
+
+           if(salario < 500 ){
+
+            var imposto = ((5/100)*salario)
+            var final = salario - imposto
+
+            alert(`O imposto aplicado ao seu salário é de 5% (R$${imposto} referente ao seu salário).
+Seu salário final vai ser de R$${final}`);
+           }else
+           if(salario >= 500 & salario == 850){
+
+            var imposto2 = ((10/100)*salario)
+            var final2 = salario - imposto2
+
+            alert(`O imposto aplicado ao seu salário é de 10% (R$${imposto2} referente ao seu salário).
+Seu salário final vai ser de R$${final2}`);
+           }else
+           if(salario > 850 ){
+
+            var imposto3 = ((15/100)*salario)
+            var final3 = salario - imposto3
+
+            alert(`O imposto aplicado ao seu salário é de 15% (R$${imposto3} referente ao seu salário).
+Seu salário final vai ser de R$${final3}`);
+
+           }
+        }
+
+    //2.Novo Salário//
+
+        function novosalario(){
+            let nsalario = parseFloat(prompt("Digite seu salário"))
+
+            if(nsalario > 1500){
+
+                var aumento1 = nsalario + 25
+
+                alert(`Você recebe um aumento de R$25.
+Seu novo salario é de R$${aumento1}`);
+            }else
+            if(nsalario >= 750 & nsalario <= 1500){
+
+                var aumento2 = nsalario + 50
+
+                alert(`Você recebe um aumento de R$50.
+Seu novo salário é de R$${aumento2}`);
+            }else
+            if(nsalario >= 450){
+
+                var aumento3 = nsalario + 75
+
+                alert(`Você recebe um aumento de R$75.
+Seu novo salário é de R$${aumento3}`);
+        }else
+            if(nsalario < 450){
+
+                var aumento4 = nsalario + 100
+
+                alert(`Você recebe um aumento de R$100.
+Seu novo salário é de R$${aumento4}`);
+            }
+        }
+
+    //3.Classificação//
+
+        function classificacao(){
+
+            let salariof = parseFloat(prompt("Digite seu salário final:"))
+
+            if(salariof <=700){
+                alert("Você é classificado como Mal remunerado")
+            }else
+            if(salariof > 700){
+                alert("Você é classificado como Bem Remunerado")
+            }
+
+        }
+    </script>
+</body>
+</html>
